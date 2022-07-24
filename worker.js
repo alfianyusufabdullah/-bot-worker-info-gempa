@@ -35,7 +35,7 @@ function sendPhoto(chatId, data) {
     })
 }
 
-cron.schedule('*/60 * * * * *', async () => {
+cron.schedule('*/10 * * * * *', async () => {
     if (isRunning) return
 
     const { data } = await axios.get('https://www.bmkg.go.id/');
