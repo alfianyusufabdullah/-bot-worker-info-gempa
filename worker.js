@@ -59,7 +59,7 @@ cron.schedule('*/60 * * * * *', async () => {
         .select('*')
 
     if (error) return console.log(error);
-    if (users.length < 1) return console.log('Pengguna kosong');
+    if (users.length < 1) return console.log('Pengguna tidak ditemukan');
 
     await Promise.all(users.map(user => sendPhoto(user.chat_id, { imageUri, time, magnitude, depth, location, locationName, status })))
 })
