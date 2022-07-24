@@ -1,0 +1,23 @@
+{
+  "name": "bot-worker-info-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config ./worker.js",
+    "start": "node -r dotenv/config ./worker.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.35.4",
+    "dotenv": "^16.0.1",
+    "node-cron": "^3.0.1",
+    "puppeteer": "^15.3.0",
+    "puppeteer-core": "^15.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
