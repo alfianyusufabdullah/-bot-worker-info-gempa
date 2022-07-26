@@ -61,6 +61,6 @@ cron.schedule('*/10 * * * * *', async () => {
     if (error) return console.log(error);
     if (users.length < 1) return console.log('Pengguna tidak ditemukan');
 
-    await Promise.all(users.map(user => sendPhoto(user.chat_id, { imageUri, time, magnitude, depth, location, locationName, status })))
+    await Promise.all(users.map(user => sendPhoto(user.id, { imageUri, time, magnitude, depth, location, locationName, status })))
 })
 
